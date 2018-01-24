@@ -41,32 +41,36 @@
 				<div class="header-content">
 					<img src="./img/logo.png" class="logo" alt="">
 					
-					<h3 class="logo-text">Бухгалтерские услуги в Алматы</h3>
-	
-					<button class="hamburger hamburger--elastic hamburger--accessible">
+					<h3 class="logo-text hidden-xs">Бухгалтерские услуги в Алматы</h3>
+
+					<nav class="main-menu">
+						<div class="container">
+							<ul class="list">
+								<li><a href="#about">О нас</a></li>
+								<li><a href="#services">Услуги</a></li>
+								<li><a href="#price-list">Прайс-лист</a></li>
+								<li><a href="#how">Как мы работаем</a></li>
+								<li><a href="#contacts">Контакты</a></li>
+								<li class="hidden-lg">+7 (776) 763-08-36</li>
+								<li class="hidden-lg">+7 (700) 763-08-36</li>
+							</ul>
+						</div>
+					</nav>
+
+					<div style="flex-grow: 1"></div>
+
+					<a href="#" class="item modal-open hidden-xss" data-id="application">Заказать звонок</a>
+
+					<div class="header-phones visible-lg">
+						+7 701 722 4159 <br>
+						+7 (727) 394-31-80
+					</div>
+
+					<button class="hamburger hamburger--elastic hamburger--accessible hidden-lg">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
 					</button>
-
-					<nav class="main-menu">
-						<ul class="list">
-							<li><a href="#about">О нас</a></li>
-							<li><a href="#services">Услуги</a></li>
-							<li><a href="#price-list">Прайс-лист</a></li>
-							<li><a href="#how">Как мы работаем</a></li>
-							<li><a href="#contacts">Контакты</a></li>
-							<li class="visible-sm visible-xs">+7 (776) 763-08-36</li>
-							<li class="visible-sm visible-xs">+7 (700) 763-08-36</li>
-						</ul>
-					</nav>
-
-					<a href="#" class="item modal-open hidden-xss" data-id="application">Заказать звонок</a>
-
-					<div class="header-phones  hidden-xs hidden-sm">
-						+7 701 722 4159 <br>
-						+7 (727) 394-31-80
-					</div>
 				</div>
 			</div>
 		</header>		
@@ -82,7 +86,10 @@
 						<form>
 							<div class="flex-row">
 								<input class="input inverse" type="text" name="Имя" placeholder="Введите имя">
-								<input class="input inverse phone" type="tel" name="Телефон" placeholder="Введите номер*">
+								<div class="input-div">
+									<input class="input inverse phone" type="tel" name="Телефон" required placeholder="Введите номер*">
+									<span class="error-message">Заполните это поле</span>
+								</div>
 								<input type="button" class="button form-submit" value="Оставить заявку">
 							</div>
 						</form>
@@ -114,7 +121,7 @@
 			</div>
 		</section>
 
-		<section class="section section-offer" style="background-image: url('./img/back-offer.jpg')">
+		<section class="section section-offer" id="services" style="background-image: url('./img/back-offer.jpg')">
 			<div class="container">
 				<h2 class="section-title">Мы предлагаем:</h2>
 				<div class="section-offer-row">
@@ -161,54 +168,56 @@
 			</div>
 		</section>
 
-		<section class="section section-calculate">
+		<section class="section section-calculate" id="price-list">
 			<div class="container">
 				<h2 class="section-title">Мы поможем Вам рассчитать стоимость услуг</h2>
 				<p>Введите данные, и мы вышлем Вам индивидуальный расчет стоимости в ближайшее время</p>
 
 				<div class="card">
-					<div class="card-row">
-						<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-1"><label for="company-type-1">ТОО</label></div>
-						<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-2"><label for="company-type-2">ИП</label></div>
-						<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-3"><label for="company-type-3">Другое</label></div>
-					</div>
-					<p>Режим налогообложения:</p>
-					<div class="card-row">
-						<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-1"><label for="tax-mode-1">Общеустановленный</label></div>
-						<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-2"><label for="tax-mode-2">Упрощенный</label></div>
-						<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-3"><label for="tax-mode-3">Патент</label></div>
-					</div>
-					<p>Вид деятельности:</p>
-					<div class="card-row">
-						<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-1"><label for="activity-type-1">Услуги</label></div>
-						<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-2"><label for="activity-type-2">Торговля</label></div>
-						<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-3"><label for="activity-type-3">Производство</label></div>
-					</div>
-					<div class="card-row">
-						<div class="radio">
-							<input type="radio" id="service-radio-4" name="Счет-фактура">	
-							<label for="service-radio-4">НДС</label>	
+					<form>
+						<div class="card-row">
+							<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-1" value="ТОО"><label for="company-type-1">ТОО</label></div>
+							<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-2" value="ИП"><label for="company-type-2">ИП</label></div>
+							<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-3" value="Другое"><label for="company-type-3">Другое</label></div>
 						</div>
-						<div class="radio">
-							<input type="radio" id="service-radio-4" name="Счет-фактура">	
-							<label for="service-radio-4">ЭСФ</label>	
+						<p>Режим налогообложения:</p>
+						<div class="card-row">
+							<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-1" value="Общеустановленный"><label for="tax-mode-1">Общеустановленный</label></div>
+							<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-2" value="Упрощенный"><label for="tax-mode-2">Упрощенный</label></div>
+							<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-3" value="Патент"><label for="tax-mode-3">Патент</label></div>
 						</div>
-					</div>
-					<div class="card-row">
-						<p>Количество сотрудников:</p>
-						<input type="number" class="input" placeholder="Введите цифру">
-					</div>
-					<div class="card-row">
-						<p>Количество операций:</p>
-						<input type="number" class="input" placeholder="Введите цифру">
-					</div>
-					<div class="card-row">
-						<input type="text" class="input" placeholder="Введите имя">
-						<input type="text" class="input phone" placeholder="Введите номер*">
-						<input type="email" class="input" placeholder="Введите e-mail*">
-					</div>
-					<button class="button">Рассчитать стоимость</button>
-					<p class="small">*Ваши данные останутся в безопасности и не будут переданы третьим лицам  </p>
+						<p>Вид деятельности:</p>
+						<div class="card-row">
+							<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-1" value="Услуги"><label for="activity-type-1">Услуги</label></div>
+							<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-2" value="Торговля"><label for="activity-type-2">Торговля</label></div>
+							<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-3" value="Производство"><label for="activity-type-3">Производство</label></div>
+						</div>
+						<div class="card-row small">
+							<div class="radio">
+								<input type="radio" id="bill-radio-1" name="Счет-фактура" value="НДС">	
+								<label for="bill-radio-1">НДС</label>	
+							</div>
+							<div class="radio">
+								<input type="radio" id="bill-radio-2" name="Счет-фактура" value="ЭСФ">	
+								<label for="bill-radio-2">ЭСФ</label>	
+							</div>
+						</div>
+						<div class="card-row">
+							<p>Количество сотрудников:</p>
+							<input type="number" name="Количество сотрудников" class="input" placeholder="Введите цифру">
+						</div>
+						<div class="card-row">
+							<p>Количество операций:</p>
+							<input type="number" name="Количество операций" class="input" placeholder="Введите цифру">
+						</div>
+						<div class="card-row last">
+							<input type="text" class="input" name="Имя" placeholder="Введите имя">
+							<input type="text" class="input phone" name="Телефон" placeholder="Введите номер*" required>
+							<input type="email" class="input" name="Email" placeholder="Введите e-mail*" required>
+						</div>
+						<button class="button form-submit">Рассчитать стоимость</button>
+						<p class="small">*Ваши данные останутся в безопасности и не будут переданы третьим лицам  </p>
+					</form>
 				</div>
 			</div>
 		</section>
@@ -296,7 +305,7 @@
 				<div class="section-question-content">
 					<p>Для начинающего бизнеса первый месяц наших услуг бесплатно, 
 							для работающего - со скидкой 50 % *  </p>
-					<button class="button">Рассчитать стоимость</button>
+					<button class="button modal-open" data-id="application">Рассчитать стоимость</button>
 					<p class="small">*а также скидки на последующие месяцы</p>
 				</div>
 			</div>
@@ -306,33 +315,16 @@
 			<div class="container">
 				<h2 class="section-title">Наши сертификаты</h2>
 
-				<div class="owl-carousel carousel-certificate" id="carousel-certificate">
-					<div class="carousel-certificate-item">
-						<a href="./img/certificate-1.jpg" data-fancybox="gallery">
-							<img src="./img/certificate-mini-1.jpg" alt="">						
-						</a>
-					</div>
-					<div class="carousel-certificate-item">
-						<a href="./img/certificate-1.jpg" data-fancybox="gallery">
-							<img src="./img/certificate-mini-1.jpg" alt="">						
-						</a>
-					</div>
-					<div class="carousel-certificate-item">
-						<a href="./img/certificate-1.jpg" data-fancybox="gallery">
-							<img src="./img/certificate-mini-1.jpg" alt="">						
-						</a>
-					</div>										
-					<div class="carousel-certificate-item">
-						<a href="./img/certificate-1.jpg" data-fancybox="gallery">
-							<img src="./img/certificate-mini-1.jpg" alt="">						
-						</a>
-					</div>
-					<div class="carousel-certificate-item">
-						<a href="./img/certificate-1.jpg" data-fancybox="gallery">
-							<img src="./img/certificate-mini-1.jpg" alt="">						
-						</a>
-					</div>										
+				<div class="section-certificate-content">
+					<a href="./img/certificate-1.jpg" class="section-certificate-item" data-fancybox="gallery">
+						<img src="./img/certificate-mini-1.jpg" alt="">						
+					</a>
+
+					<a href="./img/certificate-2.jpg" class="section-certificate-item" data-fancybox="gallery">
+						<img src="./img/certificate-mini-2.jpg" alt="">						
+					</a>
 				</div>
+
 			</div>
 		</section>
 
@@ -405,13 +397,11 @@
 			</div>
 		</section>
 
-		<section class="section section-how">
+		<section class="section section-how" id="how">
 			<div class="container">
 				<h2 class="section-title">Как мы работаем?</h2>
 
 				<div class="section-how-content">
-
-
 					<div class="how">
 						<div class="how-image"><img src="./img/how-1.png" alt=""></div>
 						<div class="how-content">Вы оставляете заявку на сайте </div>
@@ -442,18 +432,20 @@
 					<div class="how-form-title">Остались вопросы?</div>
 					<div class="how-form-text">Напишите, и мы ответим на них в кратчайшие сроки!</div>
 					<div class="how-form-content">
-						<div class="flex-row">
-							<input type="text" name="Имя" class="input" placeholder="Ваше имя">
-							<input type="email" name="Email" class="input" placeholder="E-mail*">		
-						</div>
-						<textarea name="Вопрос" class="textarea" placeholder="Ваш вопрос..."></textarea>
-						<button class="button form-submit">Задать вопрос</button>
+						<form>
+							<div class="flex-row">
+								<input type="text" name="Имя" class="input" placeholder="Ваше имя">
+								<input type="email" name="Email" class="input" required placeholder="E-mail*">		
+							</div>
+							<textarea name="Вопрос" class="textarea" placeholder="Ваш вопрос..."></textarea>
+							<button class="button form-submit">Задать вопрос</button>
+						</form>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<section class="section section-map" style="background-image: url('./img/map.jpg')">
+		<section class="section section-map" id="contacts" style="background-image: url('./img/map.jpg')">
 
 		</section>
 
@@ -501,12 +493,12 @@
 	<div class="modal" id="application">
 		<div class="modal-content">
 			<i class="modal-close"></i>
-			<h4 class="modal-title">Оставьте заявку на бесплатную консультацию специалиста</h4>
+			<h4 class="modal-title">Остаaвьте заявку, и наш менеджер свяжется с Вами в течение 15 минут</h4>
 			<form>
 				<input class="input" type="text" name="Имя" placeholder="Введите имя">
-				<input class="input phone" type="tel" name="Телефон" placeholder="Введите телефон*">
+				<input class="input phone" type="tel" name="Телефон" placeholder="Введите номер*">
 				<span class="error-message">Заполните это поле</span>
-				<input type="button" class="button form-submit" value="Отправить">
+				<input type="button" class="button form-submit" value="Оставить заявку">
 			</form>
 		</div>
 	</div>

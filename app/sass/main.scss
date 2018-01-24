@@ -27,7 +27,7 @@ body {
 	bottom: 0;
 	background-color: #222;
 	z-index: 100;
-	// display: none;
+	display: none;
 
 	.fa {
 		position: absolute;
@@ -70,8 +70,15 @@ body {
 }
 
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 89px;
 	padding: 20px 0;	
 	font-size: 14px;
+	z-index: 98;
+	background-color: #fff;
 
 	&-content {
 		display: flex;
@@ -89,7 +96,6 @@ body {
 	}
 
 	.hamburger {
-		display: none;
 		margin-left: 10px;
 	}
 
@@ -98,13 +104,9 @@ body {
 .main-menu {
 	margin-left: 40px;
 	flex-grow: 1;
-	// text-align: center;
 
 	ul {
 		display: flex;
-		// height: 35px;
-		// justify-content: space-between;
-		// align-items: center;
 	}	
 
 	li {
@@ -112,17 +114,15 @@ body {
 		margin-bottom: 0;
 	}
 
-	// a {
-	// 	font-size: 14px;
-	// 	text-decoration: none;
-		
-	// 	&:hover, &.active {
-	// 		color: $default_text_color;
-	// 	}
-	// }
+	a {		
+		&:hover, &.active {
+			color: $accent;
+		}
+	}
 }
 
 .page-wrapper {
+	padding-top: 89px;
 	overflow: hidden;
 }
 
@@ -156,7 +156,7 @@ body {
 
 		&-content {
 			margin: 0 auto;
-			width: 890px;
+			max-width: 890px;
 		}
 
 		&-title {
@@ -188,6 +188,10 @@ body {
 
 			.flex-row {
 				margin-top: 30px;
+
+				& > .input, .input-div {
+					width: 290px;
+				}
 			}
 
 			.button {
@@ -273,12 +277,14 @@ body {
 
 		.card {
 			display: inline-block;
-			padding: 40px 60px;
+			padding: 35px 50px;
+			max-width: 100%;
 
 			&-row {
 				display: flex;
 				align-items: center;
 				margin-bottom: 10px;
+				flex-wrap: wrap;
 
 				& > * {
 					margin: 0 30px 15px 0;
@@ -380,17 +386,19 @@ body {
 
 	&-certificate {
 
-		.carousel-certificate {
-			&-item {
-				&-text {
-					margin-top: 10px;
-				}
-			}	
+		&-content {
 		}
 
-		.owl {
-			&-carousel {
-				padding: 0 70px;
+		&-item {
+
+			img {
+				width: 155px;
+				height: 220px;	
+				margin: 0 25px 15px 0;
+			}
+
+			&:last-child {
+				margin: 0;
 			}
 		}
 	}

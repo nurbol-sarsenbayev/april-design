@@ -8,44 +8,36 @@ $(function() {
     var $loader = $(".preloader");
     var $thanks = $("#thanks");
 
-    $wnd.on('load', function() {        
-        $loader.fadeOut('slow');            
-    });
+    // $wnd.on('load', function() {        
+    //     $loader.fadeOut('slow');            
+    // });
 
-    // $wnd.scroll(function() { onscroll(); });
-
-    var menuTop = $menu.offset().top;
+    $wnd.scroll(function() { onscroll(); });
 
     var onscroll = function() {
-        if($wnd.scrollTop() > menuTop) {
-            $menu.addClass('fixed');
-        } else {
-            $menu.removeClass('fixed');
-        }
-
         if($wnd.scrollTop() > $wnd.height()) {
             $top.addClass('active');
         } else {
             $top.removeClass('active');
         }
 
-        var scrollPos = $wnd.scrollTop() + 88 + 20;
+        // var scrollPos = $wnd.scrollTop() + 88 + 20;
 
-        $menu.find("a").each(function() {
-            var link = $(this);
-            var id = link.attr('href');
-            var section = $(id);
-            var sectionTop = section.offset().top;
+        // $menu.find("a").each(function() {
+        //     var link = $(this);
+        //     var id = link.attr('href');
+        //     var section = $(id);
+        //     var sectionTop = section.offset().top;
 
-            if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
-                link.addClass('active');
-            } else {
-                link.removeClass('active');
-            }
-        });
+        //     if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
+        //         link.addClass('active');
+        //     } else {
+        //         link.removeClass('active');
+        //     }
+        // });
     }
 
-    // onscroll();
+    onscroll();
 
     $top.click(function() {
         $html.stop().animate({ scrollTop: 0 }, 'slow', 'swing');
@@ -69,13 +61,11 @@ $(function() {
         e.preventDefault();
         var $href = $(this).attr('href');
         if($href.length > 0) {
-            var dh = $wnd.outerWidth() < 992 ? 83 : 35;
+            var dh = 88;
             var top = $href.length == 1 ? 0 : $($href).offset().top - dh;
             $html.stop().animate({ scrollTop: top }, "slow", "swing");
         }
     });
-
-    $('.select').selectize();    
 
     $(".modal-open").click(function() {
         var id = $(this).data('id');
@@ -111,11 +101,19 @@ $(function() {
         e.preventDefault();
         
         var $form = $(this).closest('form');
-        var $phone = $form.find('.phone');
+        var $requireds = $form.find(':required');
+        var formValid = true;
 
-        if($phone.length && !$phone.val()) {
-            $phone.addClass('error');
-        } else {
+        $requireds.each(function() {
+            $elem = $(this);
+
+            if(!$elem.val() || !checkInput($elem)) {
+                $elem.addClass('error');
+                formValid = false;
+            }
+        })
+
+        if(formValid) {
             $.ajax({
                 type: "POST",
                 url: "/mail.php",
@@ -124,7 +122,7 @@ $(function() {
             });
 
             $(this).closest('.modal').fadeOut(500);
-            $phone.removeClass('error');
+            $requireds.removeClass('error');
             $form[0].reset();
             $thanks.fadeIn(500);
         }
@@ -136,21 +134,12 @@ $(function() {
         }
     });    
 
-    $("#carousel-certificate").owlCarousel({
-        nav: true,
-        dots: false,
-        loop: true,
-        smartSpeed: 500,
-        margin: 30,
-        navText: ['', ''],
-        responsive: {
-            0: { items: 1 },
-            480: { items: 2 },
-            768: { items: 3 },        
-            992: { items: 4, margin: 50 },
-            1200: { items: 4, margin: 100 }        
-        },
-    });
+    $("input:required").keyup(function() {
+        var $this = $(this);
+        if(!$this.hasClass('phone')) {
+            checkInput($this);
+        }
+    })
 
     $(".carousel-reviews").owlCarousel({
         nav: true,
@@ -166,4 +155,19 @@ $(function() {
     });
 
 });
+
+function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+}
+
+function checkInput($input) {
+    if($input.val()) {
+        if($input.attr('type') != 'email' || validateEmail($input.val())) {
+            $input.removeClass('error');
+            return true;
+        }
+    }
+    return false;
+}
     
