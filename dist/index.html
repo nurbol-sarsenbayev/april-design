@@ -5,8 +5,8 @@
 
 	<meta charset="utf-8">
 
-	<title>Title</title>
-	<meta name="description" content="">
+	<title>Бухгалтерские услуги в Алматы | April consulting</title>
+	<meta name="description" content="Профессиональные бухгалтерские услуги в Алматы. Занимаемся от постановки бухгалтерского учета с нуля до полноценного ведения всей бухгалтерской документации">
 
 	<meta name="format-detection" content="telephone=no">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,157 +39,452 @@
 		<header class="header">
 			<div class="container">
 				<div class="header-content">
-					<div class="logo">
-						<img src="./img/logo.png" alt="">
+					<img src="./img/logo.png" class="logo" alt="">
+					
+					<h3 class="logo-text hidden-xs">Бухгалтерские услуги в Алматы</h3>
+
+					<nav class="main-menu">
+						<div class="container">
+							<ul class="list">
+								<li><a href="#about">О нас</a></li>
+								<li><a href="#services">Услуги</a></li>
+								<li><a href="#price-list">Прайс-лист</a></li>
+								<li><a href="#how">Как мы работаем</a></li>
+								<li><a href="#contacts">Контакты</a></li>
+								<li class="hidden-lg">+7 (776) 763-08-36</li>
+								<li class="hidden-lg">+7 (700) 763-08-36</li>
+							</ul>
+						</div>
+					</nav>
+
+					<div style="flex-grow: 1"></div>
+
+					<a href="#" class="item modal-open hidden-xss" data-id="application">Заказать звонок</a>
+
+					<div class="header-phones visible-lg">
+						+7 701 722 4159 <br>
+						+7 (727) 394-31-80
 					</div>
-	
-					<button class="hamburger hamburger--elastic hamburger--accessible">
+
+					<button class="hamburger hamburger--elastic hamburger--accessible hidden-lg">
 						<span class="hamburger-box">
 							<span class="hamburger-inner"></span>
 						</span>
 					</button>
+				</div>
+			</div>
+		</header>		
 
-					<a href="#" class="link modal-open hidden-xss" data-id="application">Заказать звонок</a>
-
-					<div class="header-phones  hidden-xs hidden-sm">
-						+7 (776) 763-08-36 <br>
-						+7 (700) 763-08-36
+		<section class="section section-main" id="about" style="background-image: url('./img/back-main.jpg')">
+			<div class="container">
+				<div class="section-main-content">
+					<h1 class="section-main-title">Профессиональные бухгалтерские услуги от 20 000 тенге в месяц</h1>
+					<h3 class="section-main-subtitle">От постановки бухгалтерского учета с нуля до полноценного ведения всей бухгалтерской документации</h3>
+					<div class="section-main-form">
+						<p class="bold">Для посетителей сайта скидка 15% на любую дополнительную услугу!</p>
+						<p class="bold">Остаaвьте заявку, и наш менеджер свяжется с Вами в течение 15 минут</p>
+						<form>
+							<div class="flex-row">
+								<input class="input inverse" type="text" name="Имя" placeholder="Введите имя">
+								<div class="input-div">
+									<input class="input inverse phone" type="tel" name="Телефон" required placeholder="Введите номер*">
+									<span class="error-message">Заполните это поле</span>
+								</div>
+								<input type="button" class="button form-submit" value="Оставить заявку">
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
-		</header>
+		</section>
 
-		<nav class="main-menu">
+		<section class="section section-plus">
 			<div class="container">
-				<ul class="list">
-					<li><a href="#reviews">Отзывы</a></li>
-					<li><a href="#certificates">Сертификаты</a></li>
-					<li><a href="#team">Команда</a></li>
-					<li><a href="#work">Наши работаы</a></li>
-					<li class="visible-sm visible-xs">+7 (776) 763-08-36</li>
-					<li class="visible-sm visible-xs">+7 (700) 763-08-36</li>
+				<div class="section-plus-content">
+					<div class="plus">
+						<div class="plus-image"><img src="./img/plus-1.png" alt=""></div>
+						<h4 class="plus-text">Защитим при налоговой проверке</h4>
+					</div>
+					<div class="plus">
+						<div class="plus-image"><img src="./img/plus-2.png" alt=""></div>
+						<h4 class="plus-text">Сдадим отчетность в срок</h4>
+					</div>
+					<div class="plus">
+						<div class="plus-image"><img src="./img/plus-3.png" alt=""></div>
+						<h4 class="plus-text">Безопасно снизим налоги</h4>
+					</div>
+					<div class="plus">
+						<div class="plus-image"><img src="./img/plus-4.png" alt=""></div>
+						<h4 class="plus-text">Круглосуточная поддержка клиентов</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-offer" id="services" style="background-image: url('./img/back-offer.jpg')">
+			<div class="container">
+				<h2 class="section-title">Мы предлагаем:</h2>
+				<div class="section-offer-row">
+					<div class="item">Бухгалтерский учет</div>
+					<div class="item">Налоговая и статистическая отчетность</div>
+					<div class="item">Кадровый учет</div>
+					<div class="item">Дополнительные услуги</div>
+				</div>
+
+				<div class="section-offer-row">
+					<div class="card">
+						<p>Бухгалтерское обслуживание компаний любых видов деятельности</p>
+						<div class="radio">
+							<input type="radio" id="service-radio-1" name="Услуга">	
+							<label for="service-radio-1">Выбрать</label>	
+						</div>												
+					</div>
+					<div class="card">
+						<p>Ведение бухгалтерского учета для плательщиков НДС</p>
+						<div class="radio">
+							<input type="radio" id="service-radio-2" name="Услуга">	
+							<label for="service-radio-2">Выбрать</label>	
+						</div>												
+					</div>
+					<div class="card">
+						<p>Выписка электронных счетов-фактур</p>
+						<div class="radio">
+							<input type="radio" id="service-radio-3" name="Услуга">	
+							<label for="service-radio-3">Выбрать</label>	
+						</div>												
+					</div>
+					<div class="card">
+						<p>Ведение <br> онлайн-банкинга</p>
+						<div class="radio">
+							<input type="radio" id="service-radio-4" name="Услуга">	
+							<label for="service-radio-4">Выбрать</label>	
+						</div>												
+					</div>
+				</div>
+
+				<button class="button inverse">Заказать выбранное</button>
+				<p class="bold">Получите наш прайс-лист прямо сейчас!</p>
+				<button class="button">Получить прайс-лист</button>
+			</div>
+		</section>
+
+		<section class="section section-calculate" id="price-list">
+			<div class="container">
+				<h2 class="section-title">Мы поможем Вам рассчитать стоимость услуг</h2>
+				<p>Введите данные, и мы вышлем Вам индивидуальный расчет стоимости в ближайшее время</p>
+
+				<div class="card">
+					<form>
+						<div class="card-row">
+							<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-1" value="ТОО"><label for="company-type-1">ТОО</label></div>
+							<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-2" value="ИП"><label for="company-type-2">ИП</label></div>
+							<div class="item-radio"><input type="radio" name="Тип компании" id="company-type-3" value="Другое"><label for="company-type-3">Другое</label></div>
+						</div>
+						<p>Режим налогообложения:</p>
+						<div class="card-row">
+							<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-1" value="Общеустановленный"><label for="tax-mode-1">Общеустановленный</label></div>
+							<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-2" value="Упрощенный"><label for="tax-mode-2">Упрощенный</label></div>
+							<div class="item-radio"><input type="radio" name="Режим налогообложения" id="tax-mode-3" value="Патент"><label for="tax-mode-3">Патент</label></div>
+						</div>
+						<p>Вид деятельности:</p>
+						<div class="card-row">
+							<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-1" value="Услуги"><label for="activity-type-1">Услуги</label></div>
+							<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-2" value="Торговля"><label for="activity-type-2">Торговля</label></div>
+							<div class="item-radio"><input type="radio" name="Вид деятельности" id="activity-type-3" value="Производство"><label for="activity-type-3">Производство</label></div>
+						</div>
+						<div class="card-row small">
+							<div class="radio">
+								<input type="radio" id="bill-radio-1" name="Счет-фактура" value="НДС">	
+								<label for="bill-radio-1">НДС</label>	
+							</div>
+							<div class="radio">
+								<input type="radio" id="bill-radio-2" name="Счет-фактура" value="ЭСФ">	
+								<label for="bill-radio-2">ЭСФ</label>	
+							</div>
+						</div>
+						<div class="card-row">
+							<p>Количество сотрудников:</p>
+							<input type="number" name="Количество сотрудников" class="input" placeholder="Введите цифру">
+						</div>
+						<div class="card-row">
+							<p>Количество операций:</p>
+							<input type="number" name="Количество операций" class="input" placeholder="Введите цифру">
+						</div>
+						<div class="card-row last">
+							<input type="text" class="input" name="Имя" placeholder="Введите имя">
+							<input type="text" class="input phone" name="Телефон" placeholder="Введите номер*" required>
+							<input type="email" class="input" name="Email" placeholder="Введите e-mail*" required>
+						</div>
+						<button class="button form-submit">Рассчитать стоимость</button>
+						<p class="small">*Ваши данные останутся в безопасности и не будут переданы третьим лицам  </p>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-why gray">
+			<div class="container">
+				<h2 class="section-title">Почему удаленная бухгалтерия лучше?</h2>
+
+				<div class="row">
+					<div class="col-xxs-12 col-xs-6 col-sm-3">
+						<div class="why">
+							<div class="why-image"><img src="./img/why-1.png" alt=""></div>
+							<h3 class="why-title">Экономия средств</h3>
+							<div class="why-content">Внештатный бухгалтер не требует лишних трат на свое содержание.</div>
+						</div>
+					</div>
+					<div class="col-xxs-12 col-xs-6 col-sm-3">
+						<div class="why">
+							<div class="why-image"><img src="./img/why-2.png" alt=""></div>
+							<h3 class="why-title">Повышение эффективности</h3>
+							<div class="why-content">Сотрудник вне офиса не уходит в отпуск и в декрет, не берет больничных и не пропускает рабочие дни.</div>
+						</div>
+					</div>
+					<div class="col-xxs-12 col-xs-6 col-sm-3">
+						<div class="why">
+							<div class="why-image"><img src="./img/why-3.png" alt=""></div>
+							<h3 class="why-title">Распределение рисков</h3>
+							<div class="why-content">Вы занимаетесь бизнесом, а мы берем на себя бухгалтерию. Вам больше не нужно контролировать все и сразу.</div>
+						</div>
+					</div>
+					<div class="col-xxs-12 col-xs-6 col-sm-3">
+						<div class="why">
+							<div class="why-image"><img src="./img/why-4.png" alt=""></div>
+							<h3 class="why-title">Мобильность</h3>
+							<div class="why-content">Документы передаются моментально через мессенджеры, электронную почту или курьера.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="section section-reason">
+			<div class="container">
+				<h2 class="section-title">7 причин работать с <span class="accent">"APRIL consulting"</span></h2>
+
+				<ul class="section-reason-list list">
+					<li>
+						<div class="section-reason-number">1</div>
+						<div class="section-reason-text">Стаж работы в бухгалтерии и на финансовом рынке более 25 лет</div>
+					</li>
+					<li>
+						<div class="section-reason-number">2</div>
+						<div class="section-reason-text">Гибкая система тарифов</div>
+					</li>
+					<li>
+						<div class="section-reason-number">3</div>
+						<div class="section-reason-text">Опыт работы с компаниями, занимающимися импортом и экспортом товаров с ЕАЭС и третьих стран</div>
+					</li>
+					<li>
+						<div class="section-reason-number">4</div>
+						<div class="section-reason-text">Опыт работы с компаниями, состоящими на учете по НДС</div>
+					</li>
+					<li>
+						<div class="section-reason-number">5</div>
+						<div class="section-reason-text">Опыт работы с компаниями, осуществляющими выписку ЭСФ</div>
+					</li>
+					<li>
+						<div class="section-reason-number">6</div>
+						<div class="section-reason-text">Бесплатно предоставляем базу "1С" для ведения бухгалтерского учета</div>
+					</li>
+					<li>
+						<div class="section-reason-number">7</div>
+						<div class="section-reason-text">Проводим бесплатное экспресс-обучение основам бухгалтерии и налогообложения для клиентов-руководителей</div>
+					</li>
 				</ul>
 			</div>
-		</nav>
+		</section>
+
+		<section class="section section-question" style="background-image: url('./img/back-question.jpg')">
+			<div class="container">
+				<h2 class="section-title">Вопросы доверия</h2>
+				<p>Мы понимаем, что Ваше доверие нужно заслужить.<br>
+					<strong>Поэтому у нас есть особое предложение!</strong></p>
+
+				<div class="section-question-content">
+					<p>Для начинающего бизнеса первый месяц наших услуг бесплатно, 
+							для работающего - со скидкой 50 % *  </p>
+					<button class="button modal-open" data-id="application">Рассчитать стоимость</button>
+					<p class="small">*а также скидки на последующие месяцы</p>
+				</div>
+			</div>
+		</section>
 
 		<section class="section section-certificate" id="certificates">
 			<div class="container">
-				<h2 class="section-title">Cертификаты</h2>
+				<h2 class="section-title">Наши сертификаты</h2>
 
-				<div class="owl-carousel carousel-certificate" id="carousel-certificate">
-					<div class="carousel-certificate-item">
-						<img src="./img/certificate-mini-1.jpg" alt="">
-						<div class="carousel-certificate-item-text">
-							<a href="./img/certificate-1.jpg" data-fancybox="gallery" class="link">Увеличить</a><i class="fa fa-search-plus"></i>
-						</div>
-					</div>
-					<div class="carousel-certificate-item">
-						<img src="./img/certificate-mini-1.jpg" alt="">
-						<div class="carousel-certificate-item-text">
-							<a href="./img/certificate-1.jpg" data-fancybox="gallery" class="link">Увеличить</a><i class="fa fa-search-plus"></i>
-						</div>
-					</div>
-					<div class="carousel-certificate-item">
-						<img src="./img/certificate-mini-1.jpg" alt="">
-						<div class="carousel-certificate-item-text">
-							<a href="./img/certificate-1.jpg" data-fancybox="gallery" class="link">Увеличить</a><i class="fa fa-search-plus"></i>
-						</div>
-					</div>
-					<div class="carousel-certificate-item">
-						<img src="./img/certificate-mini-1.jpg" alt="">
-						<div class="carousel-certificate-item-text">
-							<a href="./img/certificate-1.jpg" data-fancybox="gallery" class="link">Увеличить</a><i class="fa fa-search-plus"></i>
-						</div>
-					</div>
-					<div class="carousel-certificate-item">
-						<img src="./img/certificate-mini-1.jpg" alt="">
-						<div class="carousel-certificate-item-text">
-							<a href="./img/certificate-1.jpg" data-fancybox="gallery" class="link">Увеличить</a><i class="fa fa-search-plus"></i>
-						</div>
-					</div>
+				<div class="section-certificate-content">
+					<a href="./img/certificate-1.jpg" class="section-certificate-item" data-fancybox="gallery">
+						<img src="./img/certificate-mini-1.jpg" alt="">						
+					</a>
+
+					<a href="./img/certificate-2.jpg" class="section-certificate-item" data-fancybox="gallery">
+						<img src="./img/certificate-mini-2.jpg" alt="">						
+					</a>
 				</div>
+
 			</div>
 		</section>
 
-		<section class="section section-reviews" id="reviews">
+		<section class="section section-reviews gray">
 			<div class="container">
-				<h2 class="section-title">Отзывы</h2>
-			</div>
-		</section>
+				<h2 class="section-title">Благодарности наших клиентов</h2>
 
-		<section class="section section-team" id="team">
-			<div class="container">
-				<h2 class="section-title">Наша команда</h2>
-				
-				<div class="owl-carousel carousel-team" id="carousel-team">
-					<div class="carousel-team-item">
-						<img src="./img/member-1.jpg" alt="">
-						<div class="carousel-team-title">Казбеков Алмаз</div>
-						<div class="carousel-team-text">Работник</div>
-					</div>
-					<div class="carousel-team-item">
-						<img src="./img/member-1.jpg" alt="">
-						<div class="carousel-team-title">Казбеков Алмаз</div>
-						<div class="carousel-team-text">Работник</div>
-					</div>
-					<div class="carousel-team-item">
-						<img src="./img/member-1.jpg" alt="">
-						<div class="carousel-team-title">Казбеков Алмаз</div>
-						<div class="carousel-team-text">Работник</div>
-					</div>
-					<div class="carousel-team-item">
-						<img src="./img/member-1.jpg" alt="">
-						<div class="carousel-team-title">Казбеков Алмаз</div>
-						<div class="carousel-team-text">Работник</div>
-					</div>
-					<div class="carousel-team-item">
-						<img src="./img/member-1.jpg" alt="">
-						<div class="carousel-team-title">Казбеков Алмаз</div>
-						<div class="carousel-team-text">Работник</div>
-					</div>
-					<div class="carousel-team-item">
-						<img src="./img/member-1.jpg" alt="">
-						<div class="carousel-team-title">Казбеков Алмаз</div>
-						<div class="carousel-team-text">Работник</div>
-					</div>
-					<div class="carousel-team-item">
-						<img src="./img/member-1.jpg" alt="">
-						<div class="carousel-team-title">Казбеков Алмаз</div>
-						<div class="carousel-team-text">Работник</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="section section-work" id="work">
-			<div class="container">
-				<h2 class="section-title">Наши работы</h2>
-				
 				<div class="row">
-					<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-						<div class="owl-carousel carousel-work" id="carousel-work" data-slider-id="1">
-							<div class="carousel-product-item"><img src="./img/product-big-1.jpg" alt=""></div>
-							<div class="carousel-product-item"><img src="./img/product-big-1.jpg" alt=""></div>
-							<div class="carousel-product-item"><img src="./img/product-big-1.jpg" alt=""></div>
-							<div class="carousel-product-item"><img src="./img/product-big-1.jpg" alt=""></div>
-							<div class="carousel-product-item"><img src="./img/product-big-1.jpg" alt=""></div>
+					<div class="col-lg-10 col-lg-offset-1">
+						<div class="owl-carousel carousel-reviews">
+							<div class="carousel-reviews-item">
+								<div class="carousel-reviews-title">Директор ТОО "Эталон-Дем" Шаймерденова Жанна Сафуанова  </div>
+								<div class="carousel-reviews-content">Хочу выразить благодарность 
+										Жамал Казиевне за  консультации 
+										по бух учету  и системе налогообложеия. 
+										Наша компания занимается импортом 
+										товаров с  дальнего зарубежья, мы являемся 
+										плательщиками НДС и выписываем  
+										электронные счета-фактуры. У нас возникало 
+										много вопросов касательно  начисления НДС 
+										и выписки ЭСФ, на которые мы получали 
+										оперативные и  профессиональные  ответы. 
+										Надеемся, что наше успешное сотрудничество  
+										будет долгосрочным!  
+								</div>
+							</div>
+							<div class="carousel-reviews-item">
+								<div class="carousel-reviews-title">ИП "Раимбекова Х.А."  </div>
+								<div class="carousel-reviews-content">ИП "Раимбекова Х.А." искренне благодарит 
+										Жанлсын Казиевну за ее  профессионализм, 
+										кажется нет той проблемы в области бухучета 
+										и  налогообложения, на который она не нашла 
+										бы решения, кроме того, это  необычайно 
+										доброжелательный и чуткий человек, 
+										с которым приятно  работать.
+								</div>
+							</div>
+							<div class="carousel-reviews-item">
+								<div class="carousel-reviews-title">Директор ТОО "Эталон-Дем" Шаймерденова Жанна Сафуанова  </div>
+								<div class="carousel-reviews-content">Хочу выразить благодарность 
+										Жамал Казиевне за  консультации 
+										по бух учету  и системе налогообложеия. 
+										Наша компания занимается импортом 
+										товаров с  дальнего зарубежья, мы являемся 
+										плательщиками НДС и выписываем  
+										электронные счета-фактуры. У нас возникало 
+										много вопросов касательно  начисления НДС 
+										и выписки ЭСФ, на которые мы получали 
+										оперативные и  профессиональные  ответы. 
+										Надеемся, что наше успешное сотрудничество  
+										будет долгосрочным!  
+								</div>
+							</div>
+							<div class="carousel-reviews-item">
+								<div class="carousel-reviews-title">ИП "Раимбекова Х.А."  </div>
+								<div class="carousel-reviews-content">ИП "Раимбекова Х.А." искренне благодарит 
+										Жанлсын Казиевну за ее  профессионализм, 
+										кажется нет той проблемы в области бухучета 
+										и  налогообложения, на который она не нашла 
+										бы решения, кроме того, это  необычайно 
+										доброжелательный и чуткий человек, 
+										с которым приятно  работать.
+								</div>
+							</div>
 						</div>
+
 					</div>
 				</div>
 
-				<div class="owl-thumbs carousel-work-thumbs" data-slider-id="1">
-					<div class="owl-thumb-item"><img src="./img/product-1.jpg" alt=""></div>
-					<div class="owl-thumb-item"><img src="./img/product-1.jpg" alt=""></div>
-					<div class="owl-thumb-item"><img src="./img/product-1.jpg" alt=""></div>
-					<div class="owl-thumb-item"><img src="./img/product-1.jpg" alt=""></div>
-					<div class="owl-thumb-item"><img src="./img/product-1.jpg" alt=""></div>
+			</div>
+		</section>
+
+		<section class="section section-how" id="how">
+			<div class="container">
+				<h2 class="section-title">Как мы работаем?</h2>
+
+				<div class="section-how-content">
+					<div class="how">
+						<div class="how-image"><img src="./img/how-1.png" alt=""></div>
+						<div class="how-content">Вы оставляете заявку на сайте </div>
+					</div>
+					<div class="how">
+						<div class="how-image"><img src="./img/how-2.png" alt=""></div>
+						<div class="how-content">Назначаем встречу, обсуждаем особенности Вашего бизнеса</div>
+					</div>
+					<div class="how">
+						<div class="how-image"><img src="./img/how-3.png" alt=""></div>
+						<div class="how-content">Заключаем договор на оказание услуг и соглашение о конфиденциальности</div>
+					</div>
+					<div class="how">
+						<div class="how-image"><img src="./img/how-4.png" alt=""></div>
+						<div class="how-content">Подбираем Вам индивидуального менеджера</div>
+					</div>
+					<div class="how">
+						<div class="how-image"><img src="./img/how-5.png" alt=""></div>
+						<div class="how-content">Документы передаются моментально через мессенджеры, электронную почту или курьера</div>
+					</div>
+					<div class="how">
+						<div class="how-image"><img src="./img/how-6.png" alt=""></div>
+						<div class="how-content">Вы занимаетесь бизнесом, мы отвечаем за Вашу бухгалтерию</div>
+					</div>
 				</div>
 
+				<div class="how-form">
+					<div class="how-form-title">Остались вопросы?</div>
+					<div class="how-form-text">Напишите, и мы ответим на них в кратчайшие сроки!</div>
+					<div class="how-form-content">
+						<form>
+							<div class="flex-row">
+								<input type="text" name="Имя" class="input" placeholder="Ваше имя">
+								<input type="email" name="Email" class="input" required placeholder="E-mail*">		
+							</div>
+							<textarea name="Вопрос" class="textarea" placeholder="Ваш вопрос..."></textarea>
+							<button class="button form-submit">Задать вопрос</button>
+						</form>
+					</div>
+				</div>
 			</div>
+		</section>
+
+		<section class="section section-map" id="contacts" style="background-image: url('./img/map.jpg')">
+
 		</section>
 
 		<footer class="footer">
 			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 col-lg-4">
+						<div class="footer-logo">
+							<img src="./img/logo-2.png" alt="">
+							<h3 class="logo-text">Бухгалтерские услуги <br> в Алматы</h3>
+						</div>
+					</div>
+					<div class="col-sm-6 col-lg-4">
+						<div class="footer-location">
+							<img src="./img/location.png" alt="">
+							г. Алматы, проспект Абая д 153, оф 18, <br>
+							Бизнес-центр "АлматыГорСтрой"
+						</div>
+					</div>
+					<div class="col-sm-12 col-lg-4">
+						<div class="footer-right">
+							<div class="footer-phone">
+								<img src="./img/telephone.png" alt="">
+								<div>+7 701 722 4159</div>
+								<div>+7 (727)394-31-80</div> 
+								<a href="#" class="modal-open" data-id="application">Заказать звонок</a>
+							</div>
+							<div class="footer-company">
+								Разработано командой <br>
+								<img src="./img/company-logo.png" alt="MarketingTime">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-center">
+					<div>© ТОО «April Consulting».</div> 
+					<div>Все права защищены.</div>   
+					<div>Копирование материалов запрещено! </div>
+				</div>
 			</div>
 		</footer>
 		
@@ -198,12 +493,12 @@
 	<div class="modal" id="application">
 		<div class="modal-content">
 			<i class="modal-close"></i>
-			<h4 class="modal-title">Оставьте заявку на бесплатную консультацию специалиста</h4>
+			<h4 class="modal-title">Остаaвьте заявку, и наш менеджер свяжется с Вами в течение 15 минут</h4>
 			<form>
 				<input class="input" type="text" name="Имя" placeholder="Введите имя">
-				<input class="input phone" type="tel" name="Телефон" placeholder="Введите телефон*">
+				<input class="input phone" type="tel" name="Телефон" placeholder="Введите номер*">
 				<span class="error-message">Заполните это поле</span>
-				<input type="button" class="button form-submit" value="Отправить">
+				<input type="button" class="button form-submit" value="Оставить заявку">
 			</form>
 		</div>
 	</div>
@@ -215,8 +510,8 @@
 		</div>
 	</div>
 	
-	<a href="tel:+77767630836"><img class="mobtel" src="./img/phone.png"></a>
-	<a class="whatsapp" target="_blank" href="whatsapp://send?phone=+77767630836&text=Хочу заказать!" transport="WhatsApp">
+	<a href="tel:+77017224159"><img class="mobtel" src="./img/phone.png"></a>
+	<a class="whatsapp" target="_blank" href="whatsapp://send?phone=+77017224159&text=Хочу заказать!" transport="WhatsApp">
 		<img src="./img/whatsapp.png">Написать в WhatsApp
 	</a>
 									
