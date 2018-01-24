@@ -21,20 +21,20 @@ $(function() {
             $top.removeClass('active');
         }
 
-        // var scrollPos = $wnd.scrollTop() + 88 + 20;
+        var scrollPos = $wnd.scrollTop() + 89;
 
-        // $menu.find("a").each(function() {
-        //     var link = $(this);
-        //     var id = link.attr('href');
-        //     var section = $(id);
-        //     var sectionTop = section.offset().top;
+        $menu.find("a").each(function() {
+            var link = $(this);
+            var id = link.attr('href');
+            var section = $(id);
+            var sectionTop = section.offset().top;
 
-        //     if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
-        //         link.addClass('active');
-        //     } else {
-        //         link.removeClass('active');
-        //     }
-        // });
+            if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
+                link.addClass('active');
+            } else {
+                link.removeClass('active');
+            }
+        });
     }
 
     onscroll();
