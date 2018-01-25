@@ -153,6 +153,7 @@ body {
 	}
 
 	&-main {
+		// background-position: center bottom;
 
 		&-content {
 			margin: 0 auto;
@@ -165,7 +166,7 @@ body {
 			color: #1e1e1e;
 			line-height: 1.2;
 			text-shadow: 0px 1px 9.5px rgba(40, 40, 40, 0.2);
-			margin: 150px 0 35px;
+			margin: 150px 0 50px;
 		}
 
 		&-subtitle {
@@ -173,7 +174,7 @@ body {
 			font-size: 22px;
 			color: rgb(0, 0, 0);
 			text-shadow: 0px 1px 9.5px rgba(40, 40, 40, 0.2);
-			margin-bottom: 90px;
+			margin-bottom: 70px;
 		}
 
 		&-form {

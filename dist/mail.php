@@ -2,8 +2,8 @@
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-$project_name = "In Comfort";
-$admin_email  = "Icomfortkz2017@gmail.com";
+$project_name = "April consulting";
+$admin_email  = "info@aprilcons.kz";
 $form_subject = "Заявка";
 
 //Script Foreach

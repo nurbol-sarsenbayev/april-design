@@ -168,6 +168,8 @@ $(function() {
         dots: false,
         loop: false,
         smartSpeed: 500,
+        autoplay: true,
+        autoplayTimeout: 2000,
         margin: 60,
         navText: ['', ''],
         responsive: {
