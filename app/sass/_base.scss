@@ -255,7 +255,7 @@ a {
 .radio {
 	color: $accent;
 
-	[type="radio"] {
+	[type="checkbox"], [type="radio"] {
 		display: none;
 
 		& + label {

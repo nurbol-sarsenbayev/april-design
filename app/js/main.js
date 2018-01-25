@@ -73,7 +73,13 @@ $(function() {
 
         if(id == 'service-modal') {
             var $form = $(this).closest('form');
-            var service = $form.find("input:checked").val();
+            var service = "";
+
+            $form.find("input:checked").each(function() {
+                service += $(this).val() + ", ";
+            });
+
+            if(service.length > 2) service = service.substring(0, service.length - 2);
 
             $dialog.find('.service-span').html(service);
             $dialog.find('.service-input').val(service);            
