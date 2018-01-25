@@ -64,10 +64,14 @@ a {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer; }
+  .button:hover {
+    background-color: #008f6a; }
   .button.inverse {
     border-color: #fff;
     background-color: #fff;
     color: #00805f; }
+    .button.inverse:hover {
+      background-color: #fafafa; }
 
 .list {
   margin: 0;
@@ -99,7 +103,19 @@ a {
           border-radius: 21px;
   font-size: 14px;
   text-align: center;
-  padding: 9px 21px; }
+  padding: 9px 21px;
+  cursor: pointer; }
+  .item:hover {
+    background-color: #fafafa;
+    color: #00805f; }
+  .item.active {
+    background-color: #fafafa;
+    color: #00805f;
+    -webkit-box-shadow: 0px 1px 9.5px 0.5px rgba(0, 128, 95, 0.2);
+            box-shadow: 0px 1px 9.5px 0.5px rgba(0, 128, 95, 0.2); }
+
+.owl-carousel .owl-nav.disabled {
+  display: block; }
 
 .owl-carousel .owl-prev, .owl-carousel .owl-next {
   position: absolute;
@@ -237,6 +253,8 @@ a {
       -webkit-border-radius: 21px;
               border-radius: 21px;
       cursor: pointer; }
+      .item-radio [type="radio"] + label:hover {
+        border-style: solid; }
     .item-radio [type="radio"]:checked + label {
       border-style: solid;
       -webkit-box-shadow: 0px 1px 9.5px 0.5px rgba(0, 128, 95, 0.2);
@@ -609,6 +627,12 @@ body {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
+    .section-offer .carousel-offer {
+      padding: 0 40px; }
+      .section-offer .carousel-offer.hidden {
+        display: none; }
+      .section-offer .carousel-offer .owl-item {
+        padding: 20px 5px; }
     .section-offer .item {
       margin: 0 10px 20px; }
     .section-offer .card {
@@ -621,9 +645,7 @@ body {
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
               flex-direction: column;
-      width: 250px;
-      height: 200px;
-      margin: 0 15px 20px; }
+      height: 200px; }
       .section-offer .card p {
         -webkit-box-flex: 1;
         -webkit-flex-grow: 1;

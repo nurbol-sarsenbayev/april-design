@@ -241,6 +241,21 @@ body {
 			justify-content: center;
 		}
 
+		.carousel-offer {
+			padding: 0 40px;
+			// display: none;
+			
+			&.hidden {
+				display: none;
+			}
+
+			.owl {
+				&-item {
+					padding: 20px 5px;
+				}
+			}
+		}
+
 		.item {
 			margin: 0 10px 20px;
 		}
@@ -248,9 +263,9 @@ body {
 		.card {
 			display: flex;
 			flex-direction: column;			
-			width: 250px;
+			// width: 250px;
 			height: 200px;
-			margin: 0 15px 20px;
+			// margin: 0 15px 20px;
 
 			p {
 				flex-grow: 1;
