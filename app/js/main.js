@@ -161,7 +161,25 @@ $(function() {
         if(!$this.hasClass('phone')) {
             checkInput($this);
         }
-    })
+    });
+
+    $(".price-button").click(function() {
+        var $form = $(this).closest('form');
+        var $phone = $form.find('.phone');
+
+        if(!$phone.val()) {
+            $phone.addClass('error');
+            return false;
+        } else {
+            $.ajax({
+                type: "POST",
+                url: "/mail.php",
+                data: $form.serialize()
+            }).done(function() {                
+            });
+            $form[0].reset();
+        }
+    });
 
     $(".carousel-reviews").owlCarousel({
         nav: true,
@@ -175,6 +193,22 @@ $(function() {
         responsive: {
             0: { items: 1 },
             768: { items: 2 }
+        },
+    });
+
+    $(".carousel-certificate").owlCarousel({
+        nav: true,
+        dots: false,
+        loop: false,
+        smartSpeed: 500,
+        // autoWidth: true,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        margin: 30,
+        navText: ['', ''],
+        responsive: {
+            0: { items: 1 },
+            480: { items: 2 }
         },
     });
 

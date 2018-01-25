@@ -405,6 +405,23 @@ body {
 		&-content {
 		}
 
+		.carousel-certificate {
+			margin: 0 auto;
+			max-width: 470px;
+			padding: 0 40px;
+
+			.owl-nav {
+				&.disabled {
+					display: none;
+				}
+			}
+
+			.owl-item img {
+				display: inline-block;
+				width: auto;
+			}
+		}
+
 		&-item {
 
 			img {

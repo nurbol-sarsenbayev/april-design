@@ -14,10 +14,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<meta property="og:image" content="path/to/image.jpg">
-	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<!-- <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png"> -->
 
 	<!-- Chrome, Firefox OS and Opera -->
 	<meta name="theme-color" content="#000">
@@ -278,7 +278,10 @@
 					<button class="button inverse modal-open" data-id="service-modal">Заказать выбранное</button>
 				</form>
 				<p class="bold" id="price-list">Получите наш прайс-лист прямо сейчас!</p>
-				<a target="_blank" href="./files/price-list.pdf" class="button">Получить прайс-лист</a>
+				<form>
+					<input type="tel" class="input phone" required name="Номер для прайслиста" placeholder="Ваш номер*" style="width: 230px;">
+					<a target="_blank" href="./files/price-list.pdf" class="button price-button">Получить прайс-лист</a>		
+				</form>
 			</div>
 		</section>
 
@@ -317,11 +320,11 @@
 							</div>
 						</div>
 						<div class="card-row">
-							<p>Количество сотрудников:</p>
+							<p style="width: 190px">Количество сотрудников:</p>
 							<input type="number" name="Количество сотрудников" class="input" placeholder="Введите цифру">
 						</div>
 						<div class="card-row">
-							<p>Количество операций:</p>
+							<p style="width: 190px">Количество операций:</p>
 							<input type="number" name="Количество операций" class="input" placeholder="Введите цифру">
 						</div>
 						<div class="card-row last">
@@ -429,14 +432,17 @@
 			<div class="container">
 				<h2 class="section-title">Наши сертификаты</h2>
 
-				<div class="section-certificate-content">
-					<a href="./img/certificate-1.jpg" class="section-certificate-item" data-fancybox="gallery">
-						<img src="./img/certificate-mini-1.jpg" alt="">						
-					</a>
-
-					<a href="./img/certificate-2.jpg" class="section-certificate-item" data-fancybox="gallery">
-						<img src="./img/certificate-mini-2.jpg" alt="">						
-					</a>
+				<div class="owl-carousel carousel-certificate">
+					<div class="carousel-certificate-item">
+						<a href="./img/certificate-1.jpg" class="section-certificate-item" data-fancybox="gallery">
+							<img src="./img/certificate-mini-1.jpg" alt="">						
+						</a>		
+					</div>
+					<div class="carousel-certificate-item">
+						<a href="./img/certificate-2.jpg" class="section-certificate-item" data-fancybox="gallery">
+							<img src="./img/certificate-mini-2.jpg" alt="">						
+						</a>
+					</div>
 				</div>
 
 			</div>

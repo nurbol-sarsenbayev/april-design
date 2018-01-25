@@ -145,6 +145,15 @@
 			}
 		}
 
+		&-offer {
+			.item {
+				order: 2;
+				&:nth-child(2) {
+					order: 1;
+				}
+			}
+		}
+
 		&-reviews {
 			.carousel-reviews {
 				&-title {
