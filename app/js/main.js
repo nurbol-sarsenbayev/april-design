@@ -184,10 +184,10 @@ $(function() {
     $(".carousel-reviews").owlCarousel({
         nav: true,
         dots: false,
-        loop: false,
+        loop: true,
         smartSpeed: 500,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 4000,
         margin: 60,
         navText: ['', ''],
         responsive: {
@@ -199,23 +199,23 @@ $(function() {
     $(".carousel-certificate").owlCarousel({
         nav: true,
         dots: false,
-        loop: false,
+        loop: true,
         smartSpeed: 500,
         // autoWidth: true,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 4000,
         margin: 30,
         navText: ['', ''],
         responsive: {
             0: { items: 1 },
-            480: { items: 2 }
+            480: { items: 2, autoplay: false }
         },
     });
 
     $(".carousel-offer").owlCarousel({
         nav: true,
         dots: false,
-        loop: false,
+        loop: true,
         smartSpeed: 500,
         margin: 60,
         navText: ['', ''],
