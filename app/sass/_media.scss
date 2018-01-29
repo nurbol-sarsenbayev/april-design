@@ -51,6 +51,10 @@
 				text-align: left;
 				background-image: none;				
 				margin: 0 0 40px;
+
+				br {
+					display: none;
+				}
 			}
 
 			.how {
@@ -61,6 +65,10 @@
 
 				&-image {
 					margin: 0 30px 0 0 !important;
+				}
+
+				&:nth-child(6) {
+					width: 100%;
 				}
 			}	
 
@@ -239,6 +247,12 @@
 				li:nth-child(even) {
 					padding-left: 0;
 				}
+			}
+		}
+
+		&-offer form {
+			.input, .button {
+				width: 100%;
 			}
 		}
 

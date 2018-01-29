@@ -187,7 +187,7 @@ $(function() {
         loop: true,
         smartSpeed: 500,
         autoplay: true,
-        autoplayTimeout: 4000,
+        autoplayTimeout: 10000,
         margin: 60,
         navText: ['', ''],
         responsive: {
@@ -203,7 +203,7 @@ $(function() {
         smartSpeed: 500,
         // autoWidth: true,
         autoplay: true,
-        autoplayTimeout: 4000,
+        autoplayTimeout: 10000,
         margin: 30,
         navText: ['', ''],
         responsive: {
@@ -215,7 +215,7 @@ $(function() {
     $(".carousel-offer").owlCarousel({
         nav: true,
         dots: false,
-        loop: true,
+        loop: false,
         smartSpeed: 500,
         margin: 60,
         navText: ['', ''],

@@ -287,6 +287,12 @@ body {
 		.bold {
 			color: $default_text_color;
 		}
+
+		form {
+			.input {
+				width: 230px; margin-bottom: 15px;
+			}
+		}
 	}
 
 	&-calculate {
@@ -472,7 +478,6 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			width: 260px;
 
 			&:nth-child(odd) {
 				flex-direction: column-reverse;
@@ -489,7 +494,7 @@ body {
 			}
 
 			&:nth-child(1) {
-				bottom: 65px;
+				bottom: 94px;
 				left: -130px;
 			}
 
@@ -514,6 +519,7 @@ body {
 			&:nth-child(6) {
 				top: 90px;
 				left: 683px;
+				width: 260px;
 			}
 
 
