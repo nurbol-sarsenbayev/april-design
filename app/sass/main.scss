@@ -69,6 +69,20 @@ body {
 	color: $accent;
 }
 
+#banner {
+	display: block;
+
+	.modal-content {
+		width: 892px;
+		background-color: transparent;
+		box-shadow: none;
+
+		.modal-close:before {
+			color: #fff;
+		}
+	}
+}
+
 .header {
 	position: fixed;
 	top: 0;
