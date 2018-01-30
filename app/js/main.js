@@ -7,6 +7,7 @@ $(function() {
     var $menu = $(".main-menu");
     var $loader = $(".preloader");
     var $thanks = $("#thanks");
+    var utms = parseGET();
 
     // $wnd.on('load', function() {        
     //     $loader.fadeOut('slow');            
@@ -127,13 +128,23 @@ $(function() {
                 $elem.addClass('error');
                 formValid = false;
             }
-        })
+        });
+
+        var data = $form.serialize();
+
+        if(Object.keys(utms).length > 0) {
+            for(var key in utms) {
+                data += '&' + key + '=' + utms[key];
+            }
+        } else {
+            data += '&utm=Прямой переход'
+        } 
 
         if(formValid) {
             $.ajax({
                 type: "POST",
                 url: "/mail.php",
-                data: $form.serialize()
+                data: data
             }).done(function() {                
             });
 
@@ -194,23 +205,7 @@ $(function() {
             0: { items: 1 },
             768: { items: 2 }
         },
-    });
-
-    $(".carousel-certificate").owlCarousel({
-        nav: true,
-        dots: false,
-        loop: true,
-        smartSpeed: 500,
-        // autoWidth: true,
-        autoplay: true,
-        autoplayTimeout: 10000,
-        margin: 30,
-        navText: ['', ''],
-        responsive: {
-            0: { items: 1 },
-            480: { items: 2, autoplay: false }
-        },
-    });
+    });    
 
     $(".carousel-offer").owlCarousel({
         nav: true,
@@ -264,3 +259,37 @@ function checkInput($input) {
     return false;
 }
     
+
+function parseGET(url){
+    var namekey = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'];
+
+    if(!url || url == '') url = decodeURI(document.location.search);
+     
+    if(url.indexOf('?') < 0) return Array(); 
+    url = url.split('?'); 
+    url = url[1]; 
+    var GET = [], params = [], key = []; 
+     
+    if(url.indexOf('#')!=-1){ 
+        url = url.substr(0,url.indexOf('#')); 
+    } 
+    
+    if(url.indexOf('&') > -1){ 
+        params = url.split('&');
+    } else {
+        params[0] = url; 
+    }
+    
+    for (var r=0; r < params.length; r++){
+        for (var z=0; z < namekey.length; z++){ 
+            if(params[r].indexOf(namekey[z]+'=') > -1){
+                if(params[r].indexOf('=') > -1) {
+                    key = params[r].split('=');
+                    GET[key[0]]=key[1];
+                }
+            }
+        }
+    }
+
+    return (GET);    
+};
