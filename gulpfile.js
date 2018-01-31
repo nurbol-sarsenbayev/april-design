@@ -12,7 +12,9 @@ var gulp           = require('gulp'),
     autoprefixer   = require('gulp-autoprefixer'),
     ftp            = require('vinyl-ftp'),
     notify         = require("gulp-notify"),
-    rsync          = require('gulp-rsync');
+    rsync          = require('gulp-rsync'),
+    htmlmin        = require('gulp-htmlmin'),
+    imageminJpegtran = require('imagemin-jpegtran');
 
 // Скрипты проекта
 
@@ -72,14 +74,22 @@ gulp.task('watch', ['sass', 'libs-js', 'main-js', 'browser-sync'], function() {
 
 gulp.task('imagemin', function() {
 	return gulp.src('app/img/**/*')
-		.pipe(cache(imagemin()))
+		.pipe(imagemin({
+            interlaced: true,
+            progressive: true,
+            optimizationLevel: 5,
+            svgoPlugins: [{removeViewBox: true}]
+        }))
 		.pipe(gulp.dest('dist/img')); 
 });
 
 gulp.task('build', ['removedist', 'imagemin', 'sass', 'libs-js', 'main-js'], function() {
 
+    var buildHtml = gulp.src('app/*.html')
+        .pipe(htmlmin({collapseWhitespace: true}))    
+        .pipe(gulp.dest('dist'));
+
     var buildFiles = gulp.src([
-        'app/*.html',
         'app/*.php',
         'app/.htaccess',
     ]).pipe(gulp.dest('dist'));
