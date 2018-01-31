@@ -227,6 +227,22 @@ $(function() {
         }
     });
 
+    $(".carousel-certificate").owlCarousel({
+        nav: true,
+        dots: false,
+        loop: true,
+        smartSpeed: 500,
+        // autoWidth: true,
+        autoplay: true,
+        autoplayTimeout: 10000,
+        margin: 30,
+        navText: ['', ''],
+        responsive: {
+            0: { items: 1 },
+            480: { items: 2, autoplay: false }
+        },
+    });
+
     var $items = $(".section-offer .item");
     var $carousels = $(".carousel-offer");
 
