@@ -7,7 +7,14 @@ $(function() {
     var $menu = $(".main-menu");
     var $loader = $(".preloader");
     var $thanks = $("#thanks");
+    
     var utms = parseGET();
+
+    if(utms && Object.keys(utms).length > 0) {
+        window.sessionStorage.setItem('utms', JSON.stringify(utms));
+    } else {
+        utms = JSON.parse(window.sessionStorage.getItem('utms') || "[]");
+    }
 
     // $wnd.on('load', function() {        
     //     $loader.fadeOut('slow');            
