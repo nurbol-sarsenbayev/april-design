@@ -53,7 +53,8 @@
 				margin: 0 0 40px;
 
 				br {
-					display: none;
+					content: '';
+				    margin-left: 5px;
 				}
 			}
 
