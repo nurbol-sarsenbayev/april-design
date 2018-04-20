@@ -31,16 +31,19 @@ $(function() {
 
         var scrollPos = $wnd.scrollTop() + 89;
 
-        $menu.find("a").each(function() {
+        $menu.find("a.link").each(function() {
             var link = $(this);
             var id = link.attr('href');
-            var section = $(id);
-            var sectionTop = section.offset().top;
 
-            if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
-                link.addClass('active');
-            } else {
-                link.removeClass('active');
+            if ($(id) && $(id).length > 0) {
+              var section = $(id);
+              var sectionTop = section.offset().top;
+
+              if(sectionTop <= scrollPos && (sectionTop + section.height()) >= scrollPos) {
+                  link.addClass('active');
+              } else {
+                  link.removeClass('active');
+              }
             }
         });
     }
@@ -158,7 +161,8 @@ $(function() {
             $(this).closest('.modal').fadeOut(500);
             $requireds.removeClass('error');
             $form[0].reset();
-            $thanks.fadeIn(500);
+            window.location = "/thanks.html";
+            // $thanks.fadeIn(500);
         }
     });
 
